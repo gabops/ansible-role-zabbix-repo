@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  vars:
+    zabbix_repository_version: 4.5
+  roles:
+    - role: "{{ lookup('env', 'MOLECULE_PROJECT_DIRECTORY') | basename }}"

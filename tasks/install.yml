@@ -1,0 +1,12 @@
+---
+- name: Install Zabbix official repository (RedHat)
+  yum:
+    name: "{{ zabbix_repo_official_package[zabbix_repo_version | string][ansible_distribution_major_version] }}"
+    state: present
+  when: ansible_os_family == "RedHat"
+
+- name: Install Zabbix official repository (Debian)
+  apt:
+    deb: "{{ zabbix_repo_official_package[zabbix_repo_version | string][ansible_distribution_major_version] }}"
+    state: present
+  when: ansible_os_family == "Debian"

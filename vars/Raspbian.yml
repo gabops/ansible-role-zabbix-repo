@@ -1,5 +1,5 @@
 ---
-zabbix_repository_official_package:
+zabbix_repo_official_package:
   "4.0":
     "9": https://repo.zabbix.com/zabbix/4.0/raspbian/pool/main/z/zabbix-release/zabbix-release_4.0-3+stretch_all.deb
     "10": https://repo.zabbix.com/zabbix/4.0/raspbian/pool/main/z/zabbix-release/zabbix-release_4.0-3+buster_all.deb

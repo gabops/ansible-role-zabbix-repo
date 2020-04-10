@@ -5,8 +5,17 @@
     state: present
   when: ansible_os_family == "RedHat"
 
-- name: Install Zabbix official repository (Debian)
-  apt:
-    deb: "{{ zabbix_repo_official_package[zabbix_repo_version | string][ansible_distribution_major_version] }}"
-    state: present
+- block:
+    - name: Install Zabbix official repository (Debian)
+      apt:
+        deb: "{{ zabbix_repo_official_package[zabbix_repo_version | string][ansible_distribution_major_version] }}"
+        state: present
+
+    - name: Pin Zabbix official repository (Debian)
+      copy:
+        dest: /etc/apt/preferences.d/zabbix
+        content: |
+          Package: zabbix-*
+          Pin: origin repo.zabbix.com
+          Pin-Priority: 999
   when: ansible_os_family == "Debian"

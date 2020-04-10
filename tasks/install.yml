@@ -17,5 +17,6 @@
         content: |
           Package: zabbix-*
           Pin: origin repo.zabbix.com
-          Pin-Priority: 999
+          Pin-Priority: {{ zabbix_repo_apt_pin_priority }}
+      when: zabbix_repo_apt_pin | bool
   when: ansible_os_family == "Debian"

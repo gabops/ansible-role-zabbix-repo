@@ -1,2 +1,6 @@
 ---
 zabbix_repo_version: 4.0
+
+zabbix_repo_apt_pin: true
+
+zabbix_repo_apt_pin_priority: 999

@@ -6,7 +6,7 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: zabbix_repository-molecule-instance-01
+  - name: zabbix-repo-molecule-instance-01
     image: ${TEST_DISTRO:-centos:7}
 provisioner:
   name: ansible

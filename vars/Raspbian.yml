@@ -12,3 +12,6 @@ zabbix_repo_official_package:
   "4.5":
     "9": https://repo.zabbix.com/zabbix/4.5/raspbian/pool/main/z/zabbix-release/zabbix-release_4.5-1+stretch_all.deb
     "10": https://repo.zabbix.com/zabbix/4.5/raspbian/pool/main/z/zabbix-release/zabbix-release_4.5-1+buster_all.deb
+  "5.0":
+    "9": https://repo.zabbix.com/zabbix/5.0/raspbian/pool/main/z/zabbix-release/zabbix-release_5.0-1+stretch_all.deb
+    "10": https://repo.zabbix.com/zabbix/5.0/raspbian/pool/main/z/zabbix-release/zabbix-release_5.0-1+buster_all.deb
